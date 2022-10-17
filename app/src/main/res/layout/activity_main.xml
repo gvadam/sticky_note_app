@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_blue"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/idEdit"
+        android:layout_width="match_parent"
+        android:layout_height="580dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/dark_blue"
+        android:gravity="start|top"
+        android:hint="Enter your Note Details"
+        android:inputType="textImeMultiLine"
+        android:padding="10dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/idFABSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/buttons2"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_gravity="end|bottom"
+        android:layout_margin="10dp"
+        android:onClick="SaveButton"
+        android:src="@drawable/ic_save"
+        app:tint="@android:color/white"
+        android:backgroundTint="@color/light_purple" />
+
+    <LinearLayout
+        android:id="@+id/buttons1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        android:layout_margin="10dp"
+        android:background="@color/blue"
+        app:layout_constraintBottom_toTopOf="@id/buttons2"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/idBtnReduceSize"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:text="-"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:backgroundTint="@color/blue"/>
+
+        <TextView
+            android:id="@+id/idTVSize"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:text="12"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="18sp">
+        </TextView>
+
+        <Button
+            android:id="@+id/idBtnIncreaseSize"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:text="+"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:backgroundTint="@color/blue"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/buttons2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:padding="5dp"
+        android:weightSum="3">
+        <Button
+            android:id="@+id/idBtnBold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:text="B"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:backgroundTint="@color/blue"/>
+        <Button
+            android:id="@+id/idBtnItalics"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:text="I"
+            android:textStyle="italic"
+            android:textSize="18sp"
+            android:backgroundTint="@color/blue"/>
+        <Button
+            android:id="@+id/idBtnUnderline"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:text="U"
+            android:textStyle="normal"
+            android:textSize="18sp"
+            android:backgroundTint="@color/blue"/>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
